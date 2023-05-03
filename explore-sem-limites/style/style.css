@@ -8,9 +8,11 @@
 
   --ff-aplication: "Mulish", sans-serif;
 
+  --bg-body: #fff;
+
+  --bg-app: #f9f4fb;
   --fc-h1-header: #b52184;
   --fc-p-header: #312d64;
-  --bg-body: #f9f4fb;
 
   --bg-main: linear-gradient(96.21deg, #343193 0%, #302c63 99.68%);
   --fc-h2-main: #b52184;
@@ -19,22 +21,26 @@
 
   --fc-h2-form: #b52184;
   --fc-p-input-form: #312d64;
+  --bg-button-form: linear-gradient(96.21deg, #343193 0%, #302c63 99.68%);
+  --border-input-form: #312d64;
   --fc-button: #fff;
 
   --fc-footer: #fff;
+  --bg-footer: linear-gradient(96.21deg, #343193 0%, #302c63 99.68%);
 }
 
 body {
   font-size: 1.6rem;
 
   font-family: var(--ff-aplication);
-  background: var(--bg-body);
+  background-color: var(--bg-body);
 }
 img {
   display: block;
   max-width: 100%;
 }
 .app {
+  background: var(--bg-app);
   max-width: 45rem;
   margin: auto;
 }
@@ -89,4 +95,72 @@ main {
   font-weight: 600;
   line-height: 2rem;
   color: var(--fc-p-main);
+}
+section {
+  padding: 3rem;
+}
+section h2 {
+  margin: 4rem 0 4rem 0;
+  font-size: 3.2rem;
+  font-weight: 900;
+  line-height: 4rem;
+  color: var(--fc-h2-form);
+}
+section form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+section form input {
+  width: 35rem;
+  height: 4.8rem;
+  padding: 1.2rem 1.6rem 1.2rem 1.4rem;
+  border-radius: 1.6rem;
+  border: 1px solid var(--border-input-form);
+  color: var(--fc-p-input-form);
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  font-weight: 600;
+  background-size: 1.9rem;
+  padding-left: 4rem;
+}
+section form input:nth-child(1) {
+  background: url("../assets/user.svg") no-repeat 1.3rem;
+}
+section form input:nth-child(2) {
+  background: url("../assets/email.svg") no-repeat 1.3rem;
+}
+section form textarea {
+  width: 35rem;
+  height: 12.6rem;
+  padding: 1.2rem 1.6rem 1.2rem 1.4rem;
+  border-radius: 1.6rem;
+  border: 1px solid var(--border-input-form);
+  color: var(--fc-p-input-form);
+}
+section button{
+  display: flex;
+  align-items: center;
+  margin-top: 2.4rem;
+  background: var(--bg-button-form);
+  border-radius: 1.6rem;
+  padding: 1.6rem;
+  border: none;
+  color: var(--fc-button);
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  text-align: center;
+  height: 4.5rem;
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 7.8rem;
+  background: var(--bg-footer);
+  color: var(--fc-footer);
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
 }
