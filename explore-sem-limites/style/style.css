@@ -39,6 +39,12 @@ img {
   display: block;
   max-width: 100%;
 }
+#imgHeader-web {
+  display: none;
+}
+#details-form {
+  display: none;
+}
 .app {
   background: var(--bg-app);
   max-width: 45rem;
@@ -138,7 +144,7 @@ section form textarea {
   border: 1px solid var(--border-input-form);
   color: var(--fc-p-input-form);
 }
-section button{
+section button {
   display: flex;
   align-items: center;
   margin-top: 2.4rem;
@@ -163,4 +169,106 @@ footer {
   font-weight: 600;
   font-size: 1.4rem;
   line-height: 2.4rem;
+}
+@media (min-width: 800px) {
+  .app {
+    max-width: 100vw;
+  }
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  header div {
+    grid-row: 1;
+    text-align: center;
+  }
+  header img:nth-child(1) {
+    grid-column: 2;
+  }
+  header img:nth-child(4) {
+    justify-self: center;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  main div:nth-child(3) {
+    grid-column: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (min-width: 1000px) {
+  .app {
+    max-width: 144rem;
+    margin: auto;
+  }
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-height: 85rem;
+  }
+  #imgHeader-mobile {
+    display: none;
+  }
+  #imgHeader-web {
+    display: block;
+  }
+  header img:nth-child(4) {
+    justify-self: center;
+  }
+}
+@media (min-width: 1200px) {
+  header div h1{
+    font-size: 4.0rem;
+    margin-bottom: .8rem;
+  }
+  header div p{
+    font-size: 2.5rem;
+  }
+  main {
+    display: grid;
+    grid-template-columns: repeat(3, 35rem);
+    justify-content: center;
+  }
+  header img:nth-child(4) {
+    display: none;
+  }
+  main div:nth-child(3) {
+    grid-column: auto;
+    display: block;
+    align-items: auto;
+    justify-content: auto;
+    text-align: left;
+  }
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+  }
+  section form input {
+    width: 45rem;
+  }
+  section form textarea{
+    width: 45rem;
+  }
+  section div:nth-child(1) {
+    padding: 3rem;
+  }
+  .wrapper-details {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+  }
+  #details-form {
+    display: block;
+  }
 }
